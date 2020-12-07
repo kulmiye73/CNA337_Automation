@@ -1,10 +1,7 @@
 # Pinging AWS EC2 public IPv4.
-
-# I worked with # Pinging AWS EC2 public IPv4.
 # # I worked with Vlado, Dorin and Igor, Mohammad and Seid on this code.
-#
-
-# Liviu Patrisco (Liviu_patrisco@hotmail.com) helped us to write the cod
+# i fixed myself the paramiko code and i found from the code in github
+# Liviu Patrisco help us (Liviu_patrisco@hotmail.com) helped us to write the code
 
 # CNA 337 Fall 2020
 
@@ -13,7 +10,7 @@ from Server import Server
 
 def print_program_info():
     # TODO - Change your name
-    print("Server Automator v0.1 by yours")
+    print("Server Automator v0.1 by abdirizak")
 
 # This is the entry point to our program
 if __name__ == '__main__':
