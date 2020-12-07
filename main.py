@@ -18,7 +18,7 @@ def print_program_info():
 # This is the entry point to our program
 if __name__ == '__main__':
     print_program_info()
-    ec2_ip_address = "3.128.180.44"
+    ec2_ip_address = "3.135.203.215"
     server = Server(ec2_ip_address)
     result = server.ping()
     print(result)
@@ -26,3 +26,15 @@ if __name__ == '__main__':
         print("Server with ip [%s] is up." % ec2_ip_address)
     else:
         print("Server with ip [%s] is down." % ec2_ip_address)
+import paramiko
+
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect(hostname='3.135.203.215', username='ubuntu', key_filename='C:\\Users\\kulmi\\.ssh\\id_rsa')
+
+stdin, stdout, stderr = ssh.exec_command('sudo apt update && sudo apt upgrade -y')
+
+for line in stdout.read().splitlines():
+    print(line)
+
+ssh.close()
