@@ -1,8 +1,8 @@
 # Pinging AWS EC2 public IPv4.
-# I worked with Vlado, Dorin and Igor, Mohammad and Seid on this code.
-# Liviu Patrisco help us  (Liviu_patrisco@hotmail.com) helped us to write the code.
+#Abdirizak kulmiye
+# I got the resource from stackoverflow
 
-import os
+
 
 class Server:
     """ Server class for representing and manipulating servers. """
@@ -12,5 +12,14 @@ class Server:
         self.server_ip = server_ip
 
     def ping(self):
-        # TODO - Use os module to ping the server
-        return os.system("ping -n 4 %s" % self.server_ip)
+        import os
+        hosts = ["3.139.104.78"]
+        for host in hosts:
+            os.system('ping ' + host)
+
+            return hosts
+#TODO - Use os module to ping the server
+
+x = Server('server_ip')
+
+x.ping()
